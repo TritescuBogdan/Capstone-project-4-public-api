@@ -15,16 +15,15 @@
   <body>
     <h1>VirusTotal API</h1>
     <p id="description">
-      Use the VirusTotal public API to scan URLs, domain names or IP Addresses for
-      viruses and safety risks.
+      Use the VirusTotal public API to scan URLs, domain names or IP Addresses
+      for viruses and safety risks.
     </p>
 
     <div class="results">
       <% if(locals.userinput) { %>
-        <h2 style="text-decoration: underline">Results</h2>
-        <h3>For: <%= userinput %> </h3>
-        <% } %>
-      <% if(locals.safety) { %>
+      <h2 style="text-decoration: underline">Results</h2>
+      <h3>For: <%= userinput %></h3>
+      <% } %> <% if(locals.safety) { %>
       <h2>Safety examination: <span id="ResultColor"><%= safety %></span></h2>
       <% } else if(locals.error) { %>
       <h2><%= error %></h2>
@@ -34,7 +33,10 @@
     <div class="form-container">
       <form id="myForm" method="post">
         <div class="form">
-          <label for="URL_input"><span styke="width:30px;">URL check:</span><i>(E.g. https://website.com/main/section.php)</i></label>
+          <label for="URL_input"
+            ><span styke="width:30px;">URL check:</span
+            ><i>(E.g. https://website.com/main/section.php)</i></label
+          >
           <input
             type="url"
             id="URL_input"
@@ -44,7 +46,9 @@
           <input id="post" type="submit" value="SEND" formaction="/send-url" />
         </div>
         <div class="form">
-          <label for="DomainInput">Domain name check: <i>(E.g. google.com)</i></label>
+          <label for="DomainInput"
+            >Domain name check: <i>(E.g. google.com)</i></label
+          >
           <input
             type="text"
             id="DomainInput"
@@ -59,20 +63,24 @@
           />
         </div>
         <div class="form">
-            <label for="UploadInput">IP address check:<i>(E.g.  82.48.65.40)</i></label>
-            <input type="ip" id="UploadInput" placeholder="Enter IP address..." name="ipaddress" />
-            <input
-              id="post"
-              type="submit"
-              value="SEND"
-              formaction="/send-ip"
-            />
+          <label for="UploadInput"
+            >IP address check:<i>(E.g. 82.48.65.40)</i></label
+          >
+          <input
+            type="ip"
+            id="UploadInput"
+            placeholder="Enter IP address..."
+            name="ipaddress"
+          />
+          <input id="post" type="submit" value="SEND" formaction="/send-ip" />
         </div>
       </form>
     </div>
 
-
-    <p> <span style="color: red">*</span><i> Safety examination uses BitDefender™ engine. </i>  </p>
+    <p>
+      <span style="color: red">*</span
+      ><i> Safety examination uses BitDefender™ engine. </i>
+    </p>
 
     <script type="text/javascript">
       window.addEventListener(
@@ -92,10 +100,9 @@
         true
       );
 
-if(document.getElementById("ResultColor").textContent === "harmless") {
-  document.getElementById("ResultColor").style.color = "#00ec00";
-}
-
+      if (document.getElementById("ResultColor").textContent === "harmless") {
+        document.getElementById("ResultColor").style.color = "#00ec00";
+      }
     </script>
   </body>
 
