@@ -17,7 +17,7 @@ h3 {
   align-items: center;
 }
 #URL_input,
-#UploadInput,
+#IPAdress,
 #DomainInput {
   width: -webkit-fill-available;
   margin-bottom: 10px;

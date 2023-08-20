@@ -31,7 +31,7 @@
     </div>
 
     <div class="form-container">
-      <form id="myForm" method="post">
+      <form id="URL" method="post">
         <div class="form">
           <label for="URL_input"
             ><span styke="width:30px;">URL check:</span
@@ -45,6 +45,8 @@
           />
           <input id="post" type="submit" value="SEND" formaction="/send-url" />
         </div>
+      </form>
+      <form id="Domain" method="post">
         <div class="form">
           <label for="DomainInput"
             >Domain name check: <i>(E.g. google.com)</i></label
@@ -62,13 +64,15 @@
             formaction="/send-domain"
           />
         </div>
+      </form>
+      <form id="IP" method="post">
         <div class="form">
-          <label for="UploadInput"
+          <label for="IPAdress"
             >IP address check:<i>(E.g. 82.48.65.40)</i></label
           >
           <input
             type="ip"
-            id="UploadInput"
+            id="IPAdress"
             placeholder="Enter IP address..."
             name="ipaddress"
           />
@@ -83,23 +87,6 @@
     </p>
 
     <script type="text/javascript">
-      window.addEventListener(
-        "keydown",
-        function (e) {
-          if (
-            e.keyIdentifier == "U+000A" ||
-            e.keyIdentifier == "Enter" ||
-            e.keyCode == 13
-          ) {
-            if (e.target.nodeName == "INPUT" && e.target.type == "text") {
-              e.preventDefault();
-              return false;
-            }
-          }
-        },
-        true
-      );
-
       if (document.getElementById("ResultColor").textContent === "harmless") {
         document.getElementById("ResultColor").style.color = "#00ec00";
       }
