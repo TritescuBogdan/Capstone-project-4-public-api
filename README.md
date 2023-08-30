@@ -4,7 +4,7 @@ Simple forms for submitting URLs, domain names or IP addresses to VirusTotal. Re
 
 Clone this repository
 ```bash
-git clone https://github.com/libgit2/libgit2](https://github.com/TritescuBogdan/Capstone-project-4-public-api.git
+git clone https://github.com/TritescuBogdan/Capstone-project-4-public-api.git
 ```
 Install required packages:
 ```bash
